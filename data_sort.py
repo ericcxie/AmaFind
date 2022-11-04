@@ -2,10 +2,12 @@ import csv
 import pandas as pd
 import numpy as np
 
-csv_name = input("Please enter the name of your CSV file: ")
 
-csv_file_path = '/Users/ericxie/Documents/Develop/amazon_web_scraper/CSV_files/'
-df = pd.read_csv(csv_name + '.csv')
+csv_name = str(input("Please enter the name of your CSV file: ") + '.csv')
+
+csv_file_path = f"/Users/ericxie/Documents/Develop/amazon_web_scraper/CSV_files/{csv_name}"
+
+df = pd.read_csv(csv_file_path)
 pd.set_option('display.max_columns', 100)  
 
 # Convert from string to float
@@ -56,11 +58,3 @@ elif option.lower() == 'price + ratings' or option.lower() == 'ratings + price':
     highest_rating = df.sort_values('Rating', ascending=False).head(1)
     n = df.groupby('Description').agg({'Price':'min', 'ReviewCount':'max'})[['Price','ReviewCount']].reset_index()
 '''
-    
-    
-
-
-
-
-
-

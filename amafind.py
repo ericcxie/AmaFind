@@ -5,6 +5,7 @@ from numpy import true_divide
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import time
+import os
 
 # User input variables
 csv_file_name = input(str("What would you like to name your CSV file? "))
@@ -55,7 +56,7 @@ def extract_record(item):
 
 
 def main(search_term):
-    s = Service('/Users/ericxie/Documents/Develop/amazon_web_scraper/chromedriver')
+    s = Service('/Users/ericxie/Documents/Develop/amazon_web_scraper/amafind/chromedriver')
     driver = webdriver.Chrome(service=s)
 
     records = []
@@ -76,7 +77,12 @@ def main(search_term):
     driver.close()
 
     # Save data to CSV file
-    with open(csv_file_name + '.csv', 'w', newline='', encoding='utf-8') as f:
+    csv_file_path = '/Users/ericxie/Documents/Develop/amazon_web_scraper/CSV_files/'
+
+    path = os.path.join(csv_file_path, csv_file_name + '.csv')
+    
+
+    with open(path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['Description', 'Price', 'Rating', 'ReviewCount', 'URL'])
         writer.writerows(records)
