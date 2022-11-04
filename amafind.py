@@ -14,7 +14,7 @@ print(f"Now searching results for {item_search}...")
 
 # Create URL for search item
 def get_url(search_term):
-    template = 'https://www.amazon.ca/s?k={}&crid=17163UKR8E1DG&sprefix=monito%2Caps%2C105&ref=nb_sb_noss_2'
+    template = 'https://www.amazon.ca/s?k={}s&ref=nb_sb_noss_1'
     search_term = search_term.replace(' ', '+')
 
     # add the term query to URL
@@ -46,12 +46,12 @@ def extract_record(item):
     try:
         # Ratings/count
         rating = item.find('span', {'class': 'a-icon-alt'}).text
-        num_review = item.find('span', {'class': 'a-size-base'}).text
+        review_count = item.find('span', {'class': 'a-size-base'}).text
     except AttributeError:
         rating = '0'
-        num_review = '0'
+        review_count = '0'
 
-    result = (description, price, rating, num_review, url)
+    result = (description, price, rating, review_count, url)
     return result
 
 
@@ -80,12 +80,11 @@ def main(search_term):
     csv_file_path = '/Users/ericxie/Documents/Develop/amazon_web_scraper/CSV_files/'
 
     path = os.path.join(csv_file_path, csv_file_name + '.csv')
-    
 
     with open(path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(['Description', 'Price', 'Rating', 'ReviewCount', 'URL'])
+        writer.writerow(['Description', 'Price', 'Rating', 'Review Count', 'URL'])
         writer.writerows(records)
 
 # Execute code
-main(item_search) 
+main(item_search)
