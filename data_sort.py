@@ -2,11 +2,12 @@ import csv
 import pandas as pd
 import numpy as np
 
-
+# Prompt user for CSV file name
 csv_name = str(input("Please enter the name of your CSV file: ") + '.csv')
 
 csv_file_path = f"/Users/ericxie/Documents/Develop/amazon_web_scraper/CSV_files/{csv_name}"
 
+# Read CSV file from path
 df = pd.read_csv(csv_file_path)
 pd.set_option('display.max_columns', 100)  
 
