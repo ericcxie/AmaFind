@@ -5,4 +5,4 @@ Please download the webdriver that corresponds to your browser for this applicat
 For this project, Chrome webdriver is used and can be downloaded at https://chromedriver.chromium.org/downloads
 
 For more details, visit: https://ericxie.ca/amafind-amazon_web_scraper/
-[![Everything Is AWESOME](https://imgur.com/a/0j4WUCk)](https://youtu.be/7JiUlha6u1A)
+[![AmaFind - DEMO](https://i.imgur.com/MbHM6YU.png)](https://youtu.be/7JiUlha6u1A)
