@@ -52,10 +52,3 @@ elif option.lower() == 'review count':
         print(lowest_review)
     else:
         exit()
-'''
-elif option.lower() == 'price + ratings' or option.lower() == 'ratings + price':
-    # highest_price = df[df['Price']==df['Price'].max()]
-    lowest_price = df[df['Price']==df['Price'].min()]
-    highest_rating = df.sort_values('Rating', ascending=False).head(1)
-    n = df.groupby('Description').agg({'Price':'min', 'ReviewCount':'max'})[['Price','ReviewCount']].reset_index()
-'''
