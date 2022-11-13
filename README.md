@@ -6,5 +6,5 @@ For this project, Chrome webdriver is used and can be downloaded at https://chro
 
 For more details, visit: https://ericxie.ca/amafind-amazon_web_scraper/
 
-# Video Demo
+### Video Demo
 [![AmaFind - DEMO](https://i.imgur.com/MbHM6YU.png)](https://youtu.be/7JiUlha6u1A)
