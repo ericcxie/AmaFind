@@ -14,12 +14,13 @@ python amafind.py
 ```
 python data_sort.py
 ```
+### Tools used
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 
 ### Video Demo
 [![AmaFind - DEMO](https://i.imgur.com/MbHM6YU.png)](https://youtu.be/7JiUlha6u1A)
 ![readme_4 0](https://user-images.githubusercontent.com/66566975/201503661-1d273559-18c8-4fb1-bb80-2600876b39c1.png)
 
-### Tools used
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+
