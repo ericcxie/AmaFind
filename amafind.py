@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import time
 import os
+import getpass
 
 # User input variables
 csv_file_name = input(str("What would you like to name your CSV file? "))
@@ -56,7 +57,9 @@ def extract_record(item):
 
 
 def main(search_term):
-    s = Service('/Users/ericxie/Documents/Develop/amazon_web_scraper/amafind/chromedriver')
+    user = getpass.getuser()
+    # Replace with path of where chromedriver is located
+    s = Service(f'/Users/{user}/Documents/Develop/amazon_web_scraper/amafind/chromedriver')
     driver = webdriver.Chrome(service=s)
 
     records = []

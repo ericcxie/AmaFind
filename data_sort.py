@@ -1,11 +1,14 @@
 import csv
 import pandas as pd
 import numpy as np
+import getpass
 
 # Prompt user for CSV file name
 csv_name = str(input("Please enter the name of your CSV file: ") + '.csv')
 
-csv_file_path = f"/Users/ericxie/Documents/Develop/amazon_web_scraper/CSV_files/{csv_name}"
+user = getpass.getuser()
+# Replace with output file path from amafind.py
+csv_file_path = f"/Users/{user}/Documents/Develop/amazon_web_scraper/CSV_files/{csv_name}"
 
 # Read CSV file from path
 df = pd.read_csv(csv_file_path)
@@ -13,7 +16,7 @@ pd.set_option('display.max_columns', 100)
 
 # Convert from string to float
 df['Price'] = df['Price'].replace('[\$,]', '', regex=True).astype(float)
-df['ReviewCount'] = df['ReviewCount'].str.replace(',', '').astype(int)
+df['Review Count'] = df['Review Count'].str.replace(',', '').astype(int)
 
 print("Please choose from the following options:")
 print(f"1. Price\n2. Ratings\n3. Review Count")
@@ -45,10 +48,10 @@ elif option.lower() == 'ratings':
 elif option.lower() == 'review count':
     review_count = input("Would you like to see the highest or lowest reviewed item? ")
     if review_count.lower() == 'highest':
-        highest_review = df[df['ReviewCount']==df['ReviewCount'].max()]
+        highest_review = df[df['ReviewCount']==df['Review Count'].max()]
         print(highest_review)
     elif review_count.lower() == 'lowest':
-        lowest_review = df[df['ReviewCount']==df['ReviewCount'].min()]
+        lowest_review = df[df['ReviewCount']==df['Review Count'].min()]
         print(lowest_review)
     else:
         exit()
