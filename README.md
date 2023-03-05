@@ -4,8 +4,6 @@ AmaFind is a web scraper application that is built in Python using Selenium, Bea
 Please download the webdriver that corresponds to your browser for this application to run.
 For this project, Chrome webdriver is used and can be downloaded at https://chromedriver.chromium.org/downloads
 
-For more details, visit: https://ericxie.ca/amafind-amazon_web_scraper/
-
 ### Running amafind webscraper
 ```
 python amafind.py
